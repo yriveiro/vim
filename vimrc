@@ -20,7 +20,7 @@ set cursorline
 
 "" Look and Feel
 set background=dark
-colorscheme molokai
+colorscheme srcery
 set gfn=Monaco:h12
 
 "" NERDTree configurations
