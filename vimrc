@@ -53,6 +53,20 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+"" Syntactic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs=1
+let g:syntastic_php_checkers=['php']
+let g:syntastic_json_checkers=['json']
+let g:syntastic_xml_checkers=['xml']
+
 "" Rust grammar configurations
 let g:rustfmt_autosave = 1
 
@@ -62,3 +76,4 @@ match ExtraWhitespace /\s\+$/
 
 "" Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
 autocmd BufWritePre * :%s/\s\+$//e
+
