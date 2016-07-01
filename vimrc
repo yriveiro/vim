@@ -77,8 +77,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 noremap <leader>tt :CtrlPMRU<CR>
 noremap <leader>t :CtrlPMixed<CR>
 
-"" Rust grammar configurations
-let g:rustfmt_autosave = 1
+"" YCM
+let g:ycm_rust_src_path = '/usr/local/rust/rustc/src'
 
 "" Remove unnecessary whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
