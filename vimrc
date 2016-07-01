@@ -18,6 +18,11 @@ endif
 "" Highlight current line
 set cursorline
 
+"" Look and Feel
+set background=dark
+colorscheme molokai
+set gfn=Monaco:h12
+
 "" NERDTree configurations
 map <leader>n :NERDTreeToggle<CR>
 
