@@ -78,7 +78,7 @@ noremap <leader>tt :CtrlPMRU<CR>
 noremap <leader>t :CtrlPMixed<CR>
 
 "" YCM
-let g:ycm_rust_src_path = '/usr/local/rust/rustc/src'
+let g:ycm_rust_src_path = '/usr/local/src/rustc/src'
 
 "" Remove unnecessary whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
