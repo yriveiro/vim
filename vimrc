@@ -72,6 +72,11 @@ let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
 let g:airline_powerline_fonts = 1
 
+"" ctrlp
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+noremap <leader>tt :CtrlPMRU<CR>
+noremap <leader>t :CtrlPMixed<CR>
+
 "" Rust grammar configurations
 let g:rustfmt_autosave = 1
 
