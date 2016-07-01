@@ -8,7 +8,9 @@ if exists('$ITERM_PROFILE')
 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-"" NERDTree symbols
-
+"" NERDTree configurations
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
