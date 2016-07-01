@@ -2,6 +2,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+"" Save swap files centrally if possible
+set dir=/tmp
+
 "" Change shape of cursor in insert mode in iTerm 2
 if exists('$ITERM_PROFILE')
 	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
