@@ -33,7 +33,7 @@ set number
 set ruler
 
 "" NERDTree configurations
-map <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -66,6 +66,11 @@ let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php']
 let g:syntastic_json_checkers=['json']
 let g:syntastic_xml_checkers=['xml']
+
+"" Airline
+let g:airline_enable_branch = 1
+let g:airline_enable_syntastic = 1
+let g:airline_powerline_fonts = 1
 
 "" Rust grammar configurations
 let g:rustfmt_autosave = 1
