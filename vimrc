@@ -23,6 +23,15 @@ set background=dark
 colorscheme srcery
 set gfn=Monaco:h12
 
+if version >= 703
+	set colorcolumn=80
+	set undofile
+	set undodir=$TEMP
+endif
+
+set number
+set ruler
+
 "" NERDTree configurations
 map <leader>n :NERDTreeToggle<CR>
 
