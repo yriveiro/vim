@@ -31,3 +31,6 @@ let g:NERDTreeIndicatorMapCustom = {
 
 "" Rust grammar configurations
 let g:rustfmt_autosave = 1
+
+"" Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
+autocmd BufWritePre * :%s/\s\+$//e
