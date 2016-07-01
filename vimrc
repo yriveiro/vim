@@ -21,7 +21,7 @@ set cursorline
 "" Look and Feel
 set background=dark
 colorscheme srcery
-set gfn=Monaco:h12
+set gfn=Monaco\ for\ Powerline:h12:cANSI
 
 if version >= 703
 	set colorcolumn=80
@@ -68,9 +68,9 @@ let g:syntastic_json_checkers=['json']
 let g:syntastic_xml_checkers=['xml']
 
 "" Airline
+let g:airline_powerline_fonts = 1
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
-let g:airline_powerline_fonts = 1
 
 "" ctrlp
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
