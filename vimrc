@@ -9,6 +9,8 @@ if exists('$ITERM_PROFILE')
 endif
 
 "" NERDTree configurations
+map <leader>n :NERDTreeToggle<CR>
+
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
