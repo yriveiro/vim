@@ -42,5 +42,9 @@ let g:NERDTreeIndicatorMapCustom = {
 "" Rust grammar configurations
 let g:rustfmt_autosave = 1
 
+"" Remove unnecessary whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 "" Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
 autocmd BufWritePre * :%s/\s\+$//e
