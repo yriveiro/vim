@@ -1,38 +1,35 @@
+" ------------------
+" Vim configurations
+" ------------------
+
+" Load pathogen to work with plugins
 execute pathogen#infect()
+
+" Vim general settings
 syntax on
 filetype plugin indent on
 
-"" Save swap files centrally if possible
+set mouse=a
+set ruler
 set dir=/tmp
-
-"" Show invisibles
+set number
 set list
 set listchars=tab:▸\ ,eol:¬
-
-"" Change shape of cursor in insert mode in iTerm 2
-if exists('$ITERM_PROFILE')
-	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
-"" Highlight current line
 set cursorline
-
-"" Look and Feel
 set background=dark
-colorscheme srcery
 set gfn=Monaco\ for\ Powerline:h12:cANSI
+set colorcolumn=80
+set undofile
+set undodir=$TEMP
 
-if version >= 703
-	set colorcolumn=80
-	set undofile
-	set undodir=$TEMP
-endif
+colorscheme srcery
 
-set number
-set ruler
+" ----------------------
+"  Plugin configurations
+" ----------------------
 
-"" NERDTree configurations
+" NERDTree configurations
+
 nmap <leader>n :NERDTreeToggle<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -53,37 +50,64 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-"" Syntactic configuration
+
+" Syntactic configuration
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php']
 let g:syntastic_json_checkers=['json']
 let g:syntastic_xml_checkers=['xml']
 
-"" Airline
+" Airline
+"
 let g:airline_powerline_fonts = 1
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
 
-"" ctrlp
+" ctrlp
+"
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 noremap <leader>tt :CtrlPMRU<CR>
 noremap <leader>t :CtrlPMixed<CR>
 
-"" YCM
+" YCM
+
 let g:ycm_rust_src_path = '/usr/local/src/rustc/src'
 
-"" Remove unnecessary whitespace
+" Remove unnecessary whitespace
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-"" Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
+
+" ----------------------
+" Commands
+" ----------------------
+
+" Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Rust Cargo cmd
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+
+
+" ----------------------
+" Terminal configuration
+" ----------------------
+
+" Change shape of cursor in insert mode in iTerm 2
+
+if exists('$ITERM_PROFILE')
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
