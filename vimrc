@@ -84,6 +84,14 @@ noremap <leader>t :CtrlPMixed<CR>
 
 let g:ycm_rust_src_path = '/usr/local/src/rustc/src'
 
+" PHP-CS-FIXER
+let g:php_cs_fixer_path = '/usr/local/bin/php-cs-fixer'
+let g:php_cs_fixer_level = 'psr2'
+let g:php_cs_fixer_fixers_list = 'PSR2,concat_with_spaces,short_array_syntax'
+let g:php_cs_fixer_php_path = '/usr/local/bin/php'
+
+nnoremap <silent><leader>f :call PhpCsFixerFixFile()<CR>
+
 " Remove unnecessary whitespace
 
 highlight ExtraWhitespace ctermbg=red guibg=red
