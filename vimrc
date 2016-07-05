@@ -99,7 +99,7 @@ match ExtraWhitespace /\s\+$/
 
 
 " ----------------------
-" Commands
+" AutoCommands
 " ----------------------
 
 " Can't really expect that this is usefull on shitty repositories. Erase all empty spaces
@@ -107,6 +107,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Rust Cargo cmd
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+
+" Set file type for specific extensions
+autocmd BufNewFile,BufRead *.twig set filetype=twig
+autocmd BufNewFile,BufRead *.less set filetype=less
+autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
 
 " ----------------------
