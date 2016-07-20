@@ -15,6 +15,7 @@ Plug 'roosta/srcery'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'editorconfig/editorconfig-vim'
 
 " Loaded when specific file type is opened
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
