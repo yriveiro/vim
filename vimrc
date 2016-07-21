@@ -40,7 +40,7 @@ set smartcase
 set showcmd
 set cursorline
 set dir=/tmp
-set number
+set relativenumber
 set list
 set listchars=tab:▸\ ,eol:¬
 set gfn=Monaco\ for\ Powerline:h12:cANSI
@@ -50,6 +50,8 @@ set synmaxcol=2048
 set wildmode=list:longest
 set completeopt=menuone,longest,preview
 set clipboard=unnamed
+set splitbelow
+set splitright
 
 colorscheme srcery
 
