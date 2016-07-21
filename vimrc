@@ -110,17 +110,6 @@ let g:ctrlp_working_path_mode = 'ra'
 noremap <leader>tt :CtrlPMRU<CR>
 noremap <leader>t :CtrlPMixed<CR>
 
-" PHP-CS-FIXER
-
-if exists('*PhpCsFixerFixFile')
-  let g:php_cs_fixer_path='/usr/local/bin/php-cs-fixer'
-  let g:php_cs_fixer_level='psr2'
-  let g:php_cs_fixer_fixers_list='PSR2,concat_with_spaces,short_array_syntax'
-  let g:php_cs_fixer_php_path='/usr/local/bin/php'
-
-  nnoremap <silent><leader>f :call PhpCsFixerFixFile()<CR>
-endif
-
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline_enable_branch=1
@@ -146,6 +135,14 @@ nnoremap <Leader>a <Esc>:Ack!<Space>
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+augroup phpcs_configuration
+    autocmd filetype php let g:php_cs_fixer_path='/usr/local/bin/php-cs-fixer'
+    autocmd filetype php let g:php_cs_fixer_level='psr2'
+    autocmd filetype php let g:php_cs_fixer_fixers_list='PSR2,concat_with_spaces,short_array_syntax'
+    autocmd filetype php let g:php_cs_fixer_php_path='/usr/local/bin/php'
+    autocmd filetype php nnoremap <silent><leader>f :call PhpCsFixerFixFile()<CR>
+augroup END
 
 
 " ----------------------
