@@ -156,5 +156,10 @@ if exists('$ITERM_PROFILE')
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" Deactivate arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " vim:set ft=vim et sw=2:
