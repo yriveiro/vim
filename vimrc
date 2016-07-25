@@ -16,6 +16,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 
 " Loaded when specific file type is opened
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
@@ -114,6 +116,9 @@ noremap <leader>t :CtrlPMixed<CR>
 let g:airline_powerline_fonts=1
 let g:airline_enable_branch=1
 let g:airline_enable_syntastic=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 set laststatus=2
 
 " UltiSnips
