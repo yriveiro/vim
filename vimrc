@@ -21,6 +21,7 @@ Plug 'xolox/vim-misc'
 
 " Loaded when specific file type is opened
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'rust-lang/rust.vim', {'for': 'rs'}
 
 " Add plugins to &runtimepath
 call plug#end()
