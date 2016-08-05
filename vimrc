@@ -56,6 +56,7 @@ set completeopt=menuone,longest,preview
 set clipboard=unnamed
 set splitbelow
 set splitright
+set termguicolors
 
 colorscheme srcery
 
