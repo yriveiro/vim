@@ -117,6 +117,7 @@ let g:NERDTreeIndicatorMapCustom = {
 " ctrlp
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_dont_split = 'NERD'
 
 noremap <leader>tt :CtrlPMRU<CR>
 noremap <leader>t :CtrlPMixed<CR>
