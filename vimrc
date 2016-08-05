@@ -18,6 +18,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'scrooloose/nerdcommenter'
 
 " Loaded when specific file type is opened
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
