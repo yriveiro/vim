@@ -32,6 +32,7 @@ call plug#end()
 " Vim configurations
 " ----------------------
 
+set tabstop=4
 set nocompatible
 set mouse=a
 set smartindent
@@ -57,12 +58,13 @@ set clipboard=unnamed
 set splitbelow
 set splitright
 set termguicolors
+set so=999
 
 colorscheme srcery
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
-  highlight ColorColumn ctermbg=9
+  highlight ColorColumn ctermbg=7 guibg=red
 endif
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -143,6 +145,10 @@ let g:ycm_confirm_extra_conf=0
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a <Esc>:Ack!<Space>
 
+" Gitgutter
+nmap gn <Plug>GitGutterNextHunk
+nmap gp <Plug>GitGutterPrevHunk
+
 " ----------------------
 " AutoCommands
 " ----------------------
@@ -188,11 +194,5 @@ if exists('$ITERM_PROFILE')
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-
-" Deactivate arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 
 " vim:set ft=vim et sw=2:
